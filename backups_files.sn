@@ -1,0 +1,12 @@
+#!/bin/bash
+
+currentPath=$(pwd)
+tarPath=~/backups/$(date +%Y%m%d-%H%M%S).tar.gz
+cd .. &&
+mkdir -p ~/backups/ &&
+tar czf $tarPath $currentPath
+
+echo "Saved to" $tarPath
+
+echo "DONE"
+
